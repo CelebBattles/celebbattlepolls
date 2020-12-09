@@ -14,7 +14,7 @@ def reddit_login():
 
 # Creates a poll on poll_sub
 def create_poll(poll_sub, title, celebs_list_cleaned, reddit):
-    poll = reddit.subreddit(poll_sub).submit_poll(
+    poll = poll_sub.submit_poll(
         title,
         selftext="",
         options=celebs_list_cleaned,
